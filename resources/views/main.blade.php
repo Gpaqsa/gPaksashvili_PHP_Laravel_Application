@@ -21,6 +21,7 @@
         </li>
     @endforeach
 </ul>
+
 {{-- Subscribe Content --}}
 <footer class="m-4">
     <div class="mt-2">
