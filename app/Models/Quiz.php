@@ -9,4 +9,6 @@ class Quiz extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'imagLink', "status"];
+    
+
 }
