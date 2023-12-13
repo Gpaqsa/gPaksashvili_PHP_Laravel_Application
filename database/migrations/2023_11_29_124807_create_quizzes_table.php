@@ -16,6 +16,7 @@ return new class extends Migration
             $table-> string('name', 255);
             $table-> string("image", 255);
             $table-> string("status", 255);
+            $table -> string("options", 255);
             $table->timestamps();
         });
     }

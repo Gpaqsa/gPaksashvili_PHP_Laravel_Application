@@ -3,6 +3,10 @@
 <!-- TAB Title -->
 @section('title', "QuizMainPage")
 
+@push('css')
+<link rel="stylesheet" href=".\resources\css\app.css"/>
+@endpush
+
 <!-- Content -->
 @section('content')
 
@@ -12,11 +16,11 @@
 </div>
 
 <!-- Quiz Group -->
-<ul class="quiz-list-group ">
+<ul class="quiz-list-group d-flex flex-column">
     @foreach ($quizzes as $quiz)
-        <li class="list-group-item @if($quiz['status'] == 'active') text-success @endif list-unstyled ">
+        <li class="list-group-item d-flex justify-content-around align-items-center @if($quiz['status'] == 'active') text-success @endif list-unstyled ">
             {{ $quiz['name'] }}
-            <span class=""> Status: {{ $quiz['status'] }} </span>
+            <span class="status"> Status: {{ $quiz['status'] }} </span>
             <img src="{{ $quiz['image'] }}" alt="image" class="img-fluid img-thumbnail rounded w-25" />
         </li>
     @endforeach
